@@ -43,7 +43,7 @@ def request_image(args):
     
 # end request_image
 
-parser = argparse.ArgumentParser(prog='dmyimg', description="Get dummy image")
+parser = argparse.ArgumentParser(prog='dummyimage', description="Get dummy image")
 parser.add_argument('size', help='Size as [WIDTH]x[HEIGHT]', type=image_size)
 parser.add_argument('bg', help='Hexadecimal color for background',type=hexcode)
 parser.add_argument('fg', help='Hexadecimal color for foreground',type=hexcode)
