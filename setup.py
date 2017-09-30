@@ -10,5 +10,5 @@ setup(
     license='MIT',
     packages=['dummyimage'],
     zip_safe=False,
-    scripts: ['bin/dummyimage']
+    scripts=['bin/dummyimage']
 )
