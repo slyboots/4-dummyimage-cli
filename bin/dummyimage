@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+import dummyimage
+
+dummyimage.entry_func()
