@@ -28,8 +28,9 @@ def request_image(args):
     bg = args.bg
     fg = args.fg
     fmt = args.format
-    text: str = f"&text={args.text}" if args.text else ''
-    filename = f"./{args.text.replace(' ','-')}.{fmt}"
+    text = f"&text={args.text}" if args.text else ''
+    safe_text = f"{re.sub('[^a-zA-Z0-9\s]','',args.text.lower().replace(' ','-'))}"
+    filename = f"./{safe_text}.{fmt}"
     outdir = f"{args.out}" if args.out else "./"
     image_url = f"https://dummyimage.com/{size}/{bg}/{fg}{fmt}{text}"
     img_request = requests.get(image_url, stream=True)
